@@ -24,6 +24,8 @@ console.log(`parse to int ${parse}`);
 
 /* If statement */
 
+/* quiz 1 */
+
 const state = prompt("enter state");
 let color;
 
@@ -39,13 +41,49 @@ if (state === "stop") {
 
 console.log(`color is ${color}`);
 
-let isTrue;
+/* quiz 2 */
+
+//way 1
 let password = prompt("enter password : ");
-do {
+
+if (password.length > 6) {
+  if (password.indexOf(" ") === -1) {
+    console.log("your password is strong");
+  } else {
+    console.log("your password contains space");
+  }
+} else {
+  console.log("your password is less than 6 characters");
+}
+
+//way 2
+
+/* do {
   if (password.length > 6 && !password.includes(" ")) {
     isTrue = true;
   } else {
     isTrue = false;
     password = prompt("incorrect Please try again !");
   }
-} while (!isTrue);
+} while (!isTrue); */
+
+/* False & true values */
+
+// False  0  (empty string) Null  Undefined  NaN
+// Anything that is not False
+
+/* switch */
+
+let value = prompt("whats your name ?");
+
+switch (value) {
+  case "hossein":
+    console.log("hello welcome hossein");
+    break;
+  case "hassan":
+    console.log("hello welcome hassan");
+    break;
+  default:
+    console.log("its not a name");
+    break;
+}
