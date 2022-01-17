@@ -24,8 +24,9 @@ console.log(`NaN : 4 % "" = ${4 % "x"}`); //its NaN : not a number
 
 const firstVariable = 5;
 let secondVariable = 10;
-secondVariable += firstVariable;
 var threeVariable = 6;
+secondVariable += firstVariable; //15
+secondVariable -= threeVariable; //9
 
 console.log(
   `firstVariable : ${firstVariable} --- secondVariable : ${--secondVariable} --- threeVariable : ${++threeVariable}`
