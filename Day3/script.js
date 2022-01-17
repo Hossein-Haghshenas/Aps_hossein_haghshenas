@@ -72,3 +72,28 @@ const NULL = null; // Values that are intentionally left blank
 const UNDEFINED = Math.sum; //Values that are not defined at all
 
 console.log(`NULL is ${NULL} and UNDEFINED is ${UNDEFINED}`);
+
+/* math methods */
+
+/* if we use Math.random alone it return a float number so we use floor*/
+
+const randomNumber = Math.floor(Math.random() * 100); // * mean number to 100
+
+const piNumber = Math.PI;
+
+const roundNumber = Math.round(5.5);
+
+const absNumber = Math.abs(-8);
+
+const powerNumber = Math.pow(5, 2);
+
+const floorNumber = Math.floor(15.75724446542);
+
+const toFixedNumber = randomNumber.toFixed(3);
+
+console.log(
+  ` randomNumber : ${randomNumber} piNumber : ${piNumber} 
+  roundNumber : ${roundNumber} absNumber : ${absNumber} 
+  powerNumber : ${powerNumber} floorNumber : ${floorNumber} 
+  toFixedNumber : ${toFixedNumber}`
+);
