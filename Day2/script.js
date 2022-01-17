@@ -31,3 +31,14 @@ secondVariable -= threeVariable; //9
 console.log(
   `firstVariable : ${firstVariable} --- secondVariable : ${--secondVariable} --- threeVariable : ${++threeVariable}`
 );
+
+/* Boolean */
+
+// in js we use camel case for Names
+// !!! variable names never start with number
+// !!! variable names most more than 1 or 2 letter
+// for boolean names we can use 'is' in start of variable names
+
+let isHappy = "true"; // false
+let isHappy = True; // false
+let isHappy = true; // true
