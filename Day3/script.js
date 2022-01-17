@@ -17,6 +17,8 @@ console.log(`concat number to string : ${string}`);
 
 /* STRING METHODS */
 
+// some methods give argument in ()  like to .replace(arg,arg);
+
 const stringUpperCase = "HosSein".toUpperCase();
 
 const stringLowerCase = "HosSein".toLowerCase();
@@ -42,3 +44,22 @@ console.log(`stringUpperCase : ${stringUpperCase}   stringLowerCase : ${stringLo
  stringSlice : ${stringSlice}     stringReplace : ${stringReplace}    
  stringReplaceAll : ${stringReplaceAll}
   stringRepeat : ${stringRepeat}`);
+
+let practic = "skateboard";
+practic = practic.replace("skatebo", "be");
+
+console.log(`practic result is : ${practic}`);
+
+/* EXPRESSIONS VS STATEMENTS */
+
+5 + 5; // its EXPRESSIONS because YOU CAN PLACE IT ON THE RIGHT HAND SIDE OF AN ASSIGNMENT
+
+const welcome = "hello"; // its STATEMENTS because This is an instruction to store the value in the variable
+
+/* NULL & UNDEFINED */
+
+const NULL = null;
+
+const UNDEFINED = undefined;
+
+console.log(`NULL is ${NULL} and UNDEFINED is ${UNDEFINED}`);
