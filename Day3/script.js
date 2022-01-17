@@ -58,8 +58,17 @@ const welcome = "hello"; // its STATEMENTS because This is an instruction to sto
 
 /* NULL & UNDEFINED */
 
-const NULL = null;
+/* In JavaScript, undefined is a type, null is an object.
+ It means a variable declared, but no value has been assigned a value.
+  Whereas, null in JavaScript is an assignment value. */
 
-const UNDEFINED = undefined;
+/* How do I get undefined in JavaScript?
+ You will get undefined value when you call a non-existent property or method of an object.
+ In the above example, a function Sum does not return any result but 
+ still we try to assign its resulted value to a variable. So in this case, result will be undefined */
+
+const NULL = null; // Values that are intentionally left blank
+
+const UNDEFINED = Math.sum; //Values that are not defined at all
 
 console.log(`NULL is ${NULL} and UNDEFINED is ${UNDEFINED}`);
