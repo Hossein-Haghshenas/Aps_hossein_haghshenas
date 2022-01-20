@@ -1,4 +1,6 @@
-/* const arr = [
+// Way 1
+
+const arr = [
   "It is certain.",
   "It is decidedly so.",
   "Without a doubt.",
@@ -32,9 +34,11 @@ let randWord =
     ? `Yellow ${arr[randNum]}`
     : `Red ${arr[randNum]}`;
 
-console.log(randWord); */
+console.log(randWord);
 
 /* **************************************************************** */
+
+// Way 2
 
 const myObj = {
   Green: [
