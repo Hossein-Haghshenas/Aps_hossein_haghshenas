@@ -20,23 +20,77 @@ document.head.append(fontawesomeCdn);
 const siteHeader = document.createElement("header");
 
 siteHeader.style.display = "flex";
-siteHeader.style.justifyContent = "space-around";
+siteHeader.style.justifyContent = "space-between";
 siteHeader.style.backgroundColor = "#152846";
+siteHeader.style.padding = "0 6rem";
+
+// Create siteLogo with js
 
 const siteLogo = document.createElement("h1");
 
 siteLogo.textContent = "Practic site";
 siteLogo.style.color = "white";
 
-const siteHeaderMenu = document.createElement("i");
+// Create burgerMenu with js
 
-siteHeaderMenu.className = "fa fa-list fa-2x";
-siteHeaderMenu.style.color = "white";
-siteHeaderMenu.style.margin = "auto 0";
+const siteburgerMenu = document.createElement("ul");
 
-siteHeader.append(siteLogo, siteHeaderMenu);
+siteburgerMenu.style.backgroundColor = "#152846";
+siteburgerMenu.style.margin = "0 6rem";
+siteburgerMenu.style.padding = "0";
+siteburgerMenu.style.width = "10rem";
+siteburgerMenu.style.display = "none";
+siteburgerMenu.style.position = "absolute";
 
-// Create Header with js
+for (let j = 1; j < 5; j++) {
+  const siteburgerMenuItem = document.createElement("li");
+  siteburgerMenu.append(siteburgerMenuItem);
+}
+
+let siteburgerMenuItem = siteburgerMenu.childNodes;
+
+siteburgerMenuItem[0].textContent = "Home";
+siteburgerMenuItem[1].textContent = "Products";
+siteburgerMenuItem[2].textContent = "About Us";
+siteburgerMenuItem[3].textContent = "Contact Us";
+
+Array.from(siteburgerMenuItem).map((elem) => {
+  elem.style.padding = "2rem";
+  elem.style.color = "white";
+  elem.style.listStyle = "none";
+  elem.style.cursor = "pointer";
+
+  elem.addEventListener("mouseover", function (e) {
+    elem.style.backgroundColor = "#999999";
+  });
+
+  elem.addEventListener("mouseout", function (e) {
+    elem.style.backgroundColor = "#152846";
+  });
+});
+
+// Create burgerMenu button with js
+
+const siteburgerMenuBtn = document.createElement("i");
+
+siteburgerMenuBtn.className = "fa fa-list fa-2x";
+siteburgerMenuBtn.style.color = "white";
+siteburgerMenuBtn.style.margin = "auto 0";
+siteburgerMenuBtn.style.cursor = "pointer";
+
+siteburgerMenuBtn.addEventListener("click", () => {
+  if (siteburgerMenu.style.display === "none") {
+    siteburgerMenu.style.display = "block";
+  } else {
+    siteburgerMenu.style.display = "none";
+  }
+});
+
+// append item to header
+
+siteHeader.append(siteburgerMenuBtn, siteLogo);
+
+// Create Carusel with js
 
 const siteCarusel = document.createElement("img");
 siteCarusel.style.width = "100%";
@@ -49,4 +103,4 @@ setInterval(() => {
   siteCarusel.src = `https://picsum.photos/1350/40${[slide]}`;
 }, 6000);
 
-document.body.append(siteHeader, siteCarusel);
+document.body.append(siteHeader, siteburgerMenu, siteCarusel);
