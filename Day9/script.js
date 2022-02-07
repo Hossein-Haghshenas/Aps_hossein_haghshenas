@@ -8,7 +8,4 @@ function convert(minutes) {
 
 // question 1 tests
 
-convert(6);
-convert(4);
-convert(8);
-convert(60);
+console.log(convert(6), convert(4), convert(8), convert(60));
