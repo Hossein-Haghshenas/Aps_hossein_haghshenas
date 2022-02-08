@@ -1,4 +1,5 @@
-// 1. What's Hiding Amongst the Crowd?
+// 1 What's Hiding Amongst the Crowd?
+
 /* A word is on the loose and now has tried to hide amongst a crowd of tall letters!
  Help write a function to detect what the word is, knowing the following rules:
  The wanted word is in lowercase.
@@ -29,6 +30,17 @@ let promise = new Promise((resolve, reject) => {
   }, 1000);
 });
 
+// 3 Drink Sorting
+
+/* You will be given an array of drinks,
+ with each drink being an object with two properties: name and price. Create a function that has the drinks array
+ as an argument and return the drinks objects sorted by price in ascending order. */
+
+function sortDrinkByPrice(drinks) {
+  const sorted = drinks.sort((elem1, elem2) => elem1.price - elem2.price);
+  return sorted;
+}
+
 //test
 
 // 1
@@ -54,3 +66,20 @@ prom.then((res) => {
 });
 
 assertEquals(promise, promise);
+
+// 3
+
+const drinks1 = [
+  { name: "lemonade", price: 90 },
+  { name: "lime", price: 432 },
+  { name: "peach", price: 23 },
+];
+
+const drinks2 = [
+  { name: "water", price: 120 },
+  { name: "lime", price: 80 },
+  { name: "peach", price: 90 },
+];
+
+sortDrinkByPrice(drinks1);
+sortDrinkByPrice(drinks2);
