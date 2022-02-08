@@ -13,6 +13,22 @@ function detectWord(str) {
   return newString;
 }
 
+// 2 Promises III: Native Promise, Introducing the Executor
+
+/* 
+Promises are just objects that contain the outcome of asynchronous operations.
+ So when do you use one? When you want to control the outcome of an asynchronous operation.
+ All you have to do is wrap the asynchronous function with a promise constructor.
+ The promise constructor requires you to pass a function called the executor which takes two parameters,
+ resolve and reject.
+ Both are functions that you use to pass or reject a value that is usually the result of the async operation.  */
+
+let promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("edabit");
+  }, 1000);
+});
+
 //test
 
 // 1
@@ -23,3 +39,18 @@ detectWord("YFemHUFBbezFBYzFBYLleGBYEFGBMENTment");
 detectWord(
   "cLXSNVVJVOJBIQRVKIZWKJOIVHXELVReLXSNVVJVOJBIQRVKIZWKJOIVHXELVRrLXSNVVJVOJBIQRVKIZWKJOIVHXELVRtLXSNVVJVOJBIQRVKIZWKJOIVHXELVRaLXSNVVJVOJBIQRVKIZWKJOIVHXELVRiLXSNVVJVOJBIQRVKIZWKJOIVHXELVRn"
 );
+
+// 2
+
+let prom = promise.then((err, res) => {
+  if (err) {
+    return err;
+  }
+  return res;
+});
+
+prom.then((res) => {
+  assertEquals(typeof res, "string", "The promise needs resolve a string.");
+});
+
+assertEquals(promise, promise);
