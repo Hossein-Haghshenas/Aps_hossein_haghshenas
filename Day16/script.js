@@ -1,4 +1,4 @@
-// events
+//! events
 
 //click
 
@@ -100,3 +100,13 @@ resize.innerText = "page is't resized yet";
 document.body.onresize = () => {
   resize.innerText = `page resized height is ${window.innerHeight} and width is ${window.innerWidth}`;
 };
+
+//! addEventListener
+
+/* https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener */
+
+const btn5 = document.getElementById("btn5");
+
+btn5.addEventListener("click", () => {
+  alert("event click with addEventListener");
+});
