@@ -1,16 +1,41 @@
 const express = require("express");
-const app = express();
-const PORT = 3000;
+const firstApp = express();
+const PORT1 = 3000;
 
-app.get("/chocolate", (req, res) => {
+/* first app */
+
+firstApp.get("/chocolate", (req, res) => {
   const { amount } = req.query;
   res.send(`you wanna ${amount} chocolate`);
 });
 
-app.get("*", (req, res) => {
+firstApp.get("*", (req, res) => {
   res.send("Page not found !");
 });
 
-app.listen(PORT, () => {
-  console.log(`app is running on port : ${PORT}`);
+firstApp.listen(PORT1, () => {
+  console.log(`first App is running on port : ${PORT1}`);
+});
+
+/* seconde app */
+
+const secondeApp = express();
+const PORT2 = 5050;
+
+secondeApp.get("/multiply", (req, res) => {
+  // get querys
+  const { value1, value2 } = req.query;
+
+  /* validation */
+  Number(value1) && Number(value2)
+    ? res.send(`result is : ${value1 * value2}`)
+    : res.send(`Please enter two valide number`);
+});
+
+secondeApp.get("*", (req, res) => {
+  res.send("Page not found !");
+});
+
+secondeApp.listen(PORT2, () => {
+  console.log(`seconde App is running on port : ${PORT2}`);
 });
