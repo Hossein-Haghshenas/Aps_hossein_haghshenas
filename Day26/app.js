@@ -5,8 +5,15 @@ const PORT1 = 3000;
 /* first app */
 
 firstApp.get("/chocolate", (req, res) => {
+  // get amount from query
+
   const { amount } = req.query;
-  res.send(`you wanna ${amount} chocolate`);
+
+  /* validation */
+
+  Number(amount)
+    ? res.send(`you wanna ${amount} chocolate`)
+    : res.send(`Please enter valide amount`);
 });
 
 firstApp.get("*", (req, res) => {
@@ -23,7 +30,7 @@ const secondeApp = express();
 const PORT2 = 5050;
 
 secondeApp.get("/multiply", (req, res) => {
-  // get querys
+  // get values from querys
   const { value1, value2 } = req.query;
 
   /* validation */
