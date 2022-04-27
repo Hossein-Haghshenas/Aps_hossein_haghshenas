@@ -1,6 +1,28 @@
+* {
+  margin: unset 0;
+  padding: 0;
+  text-align: center;
+}
+
 .App {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.795);
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  text-align: center;
+}
+
+img {
+  width: 20rem;
+  height: 20rem;
 }
